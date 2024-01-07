@@ -1,0 +1,110 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header styles */
+  .glossy-header {
+    background-color: #ee6b0e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header h1 styles */
+  .glossy-header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  /* Header h6 styles */
+  .glossy-header h6 {
+    margin-top: 5px;
+  }
+  
+  /* Link styles */
+  .glossy-header a {
+    color: #60508a;
+    text-decoration: none;
+  }
+  
+  /* Link hover styles */
+  .glossy-header a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Table styles */
+  #Sell-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table th, td styles */
+  #Sell-table th,
+  #Sell-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Table th styles */
+  #Sell-table th {
+    background-color: #eecfc0;
+    text-align: left;
+  }
+  
+  /* Table tbody tr hover styles */
+  #Sell-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Total quantity and rate styles */
+  #total-quantity,
+  #total-rate {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #3f4347;
+  }
+  .Pros{
+    font-size: larger;
+    margin-left: 20px;
+  }
+  
+  .delete-icon {
+    color: #ee6b0e; /* Change the color to red */
+    cursor: pointer;
+  }
+  
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .glossy-header h1 {
+      font-size: 1.5em;
+    }
+  
+    /* Table styles */
+    #Sell-table {
+      margin-top: 10px;
+    }
+    
+    /* Table th, td styles */
+    #Sell-table th,
+    #Sell-table td {
+      padding: 6px;
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Add more media queries for other screen sizes if needed */
+  

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=0.5">
+    <title>Stock</title>
+    <link rel="stylesheet" href="stock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Stock</h1>
+        <h6>
+            <a href="index.html#inventory-form">Form to submit sell</a>
+        </h6></header>
+       <div class="contain">
+        <div class="chart" id="chart">
+            <canvas id="combined-chart" width="300" height="300"></canvas>
+        </div>
+        <div class="total">
+               <div id="totalquantityaftersell"></div>
+               <button id="toggleStockForm" class="act-button" onclick="toggleForm()">Add Stock</button>
+       </div> 
+   
+    </div>
+       <form class="stock-form" id="stock-form">
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="product">Product</label>
+            <input type="text" id="product" name="product" placeholder="Product name">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Quantity" oninput="calculateTotal()">
+        </div>
+        <div class="form-group">
+            <label for="purchase-price">Purchase Price</label>
+            <input type="number" id="purchase-price" name="purchase-price" step="any" placeholder="Purchase price">
+        </div>
+        <div class="form-group">
+            <label for="selling-price">Selling Price</label>
+            <input type="number" id="selling-price" name="selling-price" step="any" placeholder="Selling price"   oninput="calculateTotal()">
+        </div>
+        <div class="form-group">
+            <label for="total-price">Total Price</label>
+            <input type="number" id="total-price" name="total-price" placeholder="Total price" readonly>
+        </div>
+        <button type="button" class="action-button" id="stock-button" onclick="addToStock()">Add to Stock</button>
+    </form>
+    <div class="what">
+       <div class="item"></div>
+       <div class="items"></div>
+    </div>
+       <div id="total-quantity"></div><br>
+       <div id="total-rate"></div>
+       <table id="Stock-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Purchase Price</th>
+                <th>Selling Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody id="Stock-data">
+
+        </tbody>
+       </table>
+    <script src="stock.js">
+
+    </script>
+    
+</body>
+</html>

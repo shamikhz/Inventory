@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=0.7">
+
+  <title>Inventory Manager</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+
+<body>
+  <header class="glossy-header">
+    <h1>Inventory Manager</h1>
+  </header>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="nav-item" id="stock"><a href="stock.html">Stock</a></div>
+    <div class="nav-item" id="sell"><a href="sell.html">Sell</a></div>
+  </nav>
+
+  <!-- div for chart  -->
+  <center>
+    <div class="horizontal-div" id="combined-chart-container">
+      <canvas id="combined-chart" width="400" height="400"></canvas>
+    </div>
+  </center>
+  <!-- div for both form  -->
+  <div class="container">
+    <form class="inventory-form" id="inventory-form">
+      <div class="buttons">
+        <button class="action-button" onclick="showForm(event, 'showSellForm')">Sell Form</button>
+        <button class="action-button" onclick="showForm(event, 'showPurchaseForm')">Add Stock</button>
+      </div>
+
+      <div id="sell-form" class="form-section">
+        <h2>Sell Form</h2>
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="text" id="sell-name" name="name" placeholder="Customer name">
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="sell-date" name="sell-date">
+        </div>
+        <div class="form-group">
+          <label for="item">Product</label>
+          <input type="text" id="sell-item" name="sell-item" placeholder="Name of Product">
+        </div>
+        <div class="form-group">
+          <label for="qty">Quantity</label>
+          <input type="number" id="sell-qty" name="sell-qty" placeholder="No. of Product" oninput="calculateTotalS()">
+        </div>
+        <div class="form-group">
+          <label for="rate">Selling Price</label>
+          <input type="number" id="sell-rate" name="sell-rate" step="1" placeholder="Price of Product"
+            oninput="calculateTotalS()">
+        </div>
+        <div class="form-group">
+          <label for="total-rate">Total Price</label>
+          <input type="number" id="sell-total-rate" name="sell-total-rate" placeholder="Total Price" readonly>
+        </div>
+        <button class="action-button" id="sell-button" onclick="submitSell()">Submit</button>
+      </div>
+
+      <div id="purchase-form" class="form-section" style="display: none;">
+        <h2>Stock Form</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date">
+      </div>
+      <div class="form-group">
+          <label for="product">Product</label>
+          <input type="text" id="product" name="product" placeholder="Product name">
+      </div>
+      <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Quantity" oninput="calculateTotal()">
+      </div>
+      <div class="form-group">
+          <label for="purchase-price">Purchase Price</label>
+          <input type="number" id="purchase-price" name="purchase-price" step="any" placeholder="Purchase price">
+      </div>
+      <div class="form-group">
+          <label for="selling-price">Selling Price</label>
+          <input type="number" id="selling-price" name="selling-price" step="any" placeholder="Selling price"   oninput="calculateTotal()">
+      </div>
+      <div class="form-group">
+          <label for="total-price">Total Price</label>
+          <input type="number" id="total-price" name="total-price" placeholder="Total price" readonly>
+      </div>
+            <button class="action-button" id="stock-button" onclick="addToStocks()">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="index.js">
+     </script>
+</body>
+
+</html>

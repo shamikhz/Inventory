@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: #ee6b0e;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  a{
+    text-decoration: none;
+    color: #60508a;
+  }
+  #totalquantityaftersell{
+    font-size: 24px;
+    color: #3f4347;
+    margin-top: 20%;
+    width: max-content;
+  }
+  /* Container styling */
+  .contain {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .chart {
+    width: 40%;
+    max-width: 400px;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .total {
+    max-width: 300px;
+    min-width: 200px;
+    padding: 10px;
+    height: 250px;
+  }
+  .what{
+    text-align: center;
+    display: flex;
+    width: 80%;
+  }
+  .items {
+    width: 30%;
+    font-size: 20px;
+    color: #3f4347;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+   
+  .act-button {
+    display: inline-block;
+    margin: 40px ;
+    padding: 5px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #ee6b0e;
+    color: #fff;
+  }
+  
+  .stock-form {
+      display: none;
+      width: 70%; /* Adjust width using viewport width */
+      margin: 2vh auto;
+      padding: 3vh 5vw;
+      font-size: 25px; /* Adjust font size using viewport width */
+      border-radius: 5px;
+  }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ee6b0e;
+    }
+    
+    input[type="date"],
+    input[type="text"],
+    input[type="number"],
+    input[type="submit"] {
+      width: calc(100% - 12px);
+      padding: 6px;
+      border:  solid #1b1a1a;
+      border-radius: 3px;
+      font-size:30px;
+    }
+    
+  .action-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 30px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: #ee6b0e;
+      color: #fff;
+    }
+    /* table styling */
+    
+  #Stock-table th {
+    background-color: #eecfc0;
+  }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font: 1.2em sans-serif;
+    }
+    th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    td[rowspan] {
+      background-color: lightblue;
+    }
+    td[colspan] {
+      background-color: lightgreen;
+    }
+    #total-quantity{
+      color: #ee6b0e;
+      font-size: larger;
+      margin-left: 20px;
+    }
+    
+    #total-rate{
+      color: #ee6b0e;
+      font-size: larger;
+      margin-left: 20px;
+    }
+    
+    .delete-icon {
+      color: #ee6b0e; /* Change the color to red */
+      cursor: pointer;
+    }
+    
+    
+  .item {
+    width: 100%;
+    font-size: 20px;
+    color: #3f4347;
+    min-width: 150px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+    /* Existing CSS */
+    
+  /* Apply responsive design for smaller screens */
+  @media only screen and (max-width: 768px) {
+    html{
+      width: fit-content;
+    }
+  #totalquantityaftersell{
+    width: 100%;
+  }
+    .contain {
+      flex-direction: column;
+  }
+  .chart{
+    width: initial;
+  }
+  .items{
+    width: 100%;
+  }
+  }
+  
